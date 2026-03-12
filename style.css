@@ -95,29 +95,9 @@ body{
     margin:auto;
     }
     
-    /* STAR 
-    
-    .star{
-    position:absolute;
-    top:-25px;
-    left:50%;
-    transform:translateX(-50%);
-    width:0;
-    height:0;
-    border-left:12px solid transparent;
-    border-right:12px solid transparent;
-    border-bottom:20px solid gold;
-    filter:drop-shadow(0 0 10px gold);
-    animation:starGlow 2s infinite alternate;
-    }
-    
-    @keyframes starGlow{
-    from{filter:drop-shadow(0 0 5px gold)}
-    to{filter:drop-shadow(0 0 20px gold)}
-    }
-   */ 
 
     /* STAR */
+    /*
 .star {
     position: absolute;
     top: -20px;
@@ -137,10 +117,41 @@ body{
   }
   
   /* Glow animation */
+  /*
   @keyframes starGlow {
     0% { filter: drop-shadow(0 0 5px gold); }
     50% { filter: drop-shadow(0 0 15px gold); }
     100% { filter: drop-shadow(0 0 25px gold); }
+  }
+*/
+
+.star {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    width: 30px;
+    height: 30px;
+    background: gold;
+    clip-path: polygon(
+      50% 0%, 61% 35%, 98% 35%, 
+      68% 57%, 79% 91%, 50% 70%, 
+      21% 91%, 32% 57%, 2% 35%, 
+      39% 35%
+    );
+    z-index: 15;
+    /* Glow effect using box-shadow with transparent orange */
+    box-shadow: 0 0 10px rgba(255,165,0,0.6),
+                0 0 20px rgba(255,165,0,0.5),
+                0 0 30px rgba(255,165,0,0.4);
+    animation: starPulse 2s infinite alternate;
+  }
+  
+  /* Animation: star grows & shrinks */
+  @keyframes starPulse {
+    0%   { transform: translateX(-50%) scale(0.8); box-shadow: 0 0 5px rgba(255,165,0,0.5), 0 0 10px rgba(255,165,0,0.4), 0 0 15px rgba(255,165,0,0.3);}
+    50%  { transform: translateX(-50%) scale(1.05); box-shadow: 0 0 15px rgba(255,165,0,0.7), 0 0 25px rgba(255,165,0,0.6), 0 0 35px rgba(255,165,0,0.5);}
+    100% { transform: translateX(-50%) scale(0.9); box-shadow: 0 0 10px rgba(255,165,0,0.6), 0 0 20px rgba(255,165,0,0.5), 0 0 30px rgba(255,165,0,0.4);}
   }
 
     /* LIGHTS */
