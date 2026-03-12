@@ -1,0 +1,104 @@
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(180deg,#e8f9c5,#f7ffd6);
+    font-family:monospace;
+}
+
+/* Card */
+
+.card{
+    width:420px;
+    height:520px;
+    background:#ffffff;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    padding-top:40px;
+}
+
+/* Typing animation */
+
+.title{
+    font-size:32px;
+    color:#2f7d32;
+    overflow:hidden;
+    border-right:3px solid;
+    white-space:nowrap;
+    width:0;
+    animation:
+        typing 3s steps(16,end) forwards,
+        blink 0.8s infinite;
+}
+
+@keyframes typing{
+    from{width:0}
+    to{width:16ch}
+}
+
+@keyframes blink{
+    50%{border-color:transparent}
+}
+
+/* Tree */
+
+.tree{
+    position:relative;
+    margin-top:40px;
+}
+
+/* Tree layers */
+
+.layer{
+    width:0;
+    height:0;
+    border-left:90px solid transparent;
+    border-right:90px solid transparent;
+    border-bottom:120px solid #2e8b57;
+    margin-top:-40px;
+}
+
+.layer:nth-child(2){
+    border-bottom-color:#3fa96b;
+}
+
+.layer:nth-child(3){
+    border-bottom-color:#46c178;
+}
+
+/* Trunk */
+
+.trunk{
+    width:30px;
+    height:50px;
+    background:#8b5a2b;
+    margin:auto;
+}
+
+/* Lights */
+
+.light{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    position:absolute;
+    animation:blinkLights 2s infinite alternate;
+}
+
+@keyframes blinkLights{
+    0%{opacity:1}
+    100%{opacity:0.3}
+}
+
+.light1{background:red; top:20px; left:60px;}
+.light2{background:yellow; top:60px; left:110px; animation-delay:0.5s;}
+.light3{background:blue; top:90px; left:30px; animation-delay:1s;}
+.light4{background:pink; top:120px; left:100px; animation-delay:1.5s;}
+.light5{background:orange; top:150px; left:50px; animation-delay:0.7s;}
+.light6{background:cyan; top:170px; left:120px; animation-delay:1.3s;}
