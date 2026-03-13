@@ -43,7 +43,7 @@ https://github.com/user-attachments/assets/2073a45a-d67a-4262-9834-bc32743a9d1a
 
 ---
 
-## 🖼️ Potential Applications
+## ✨ Potential Applications
 
 - Interactive website components (holiday banners, greeting cards)  
 - UI/UX animation practice projects  
