@@ -20,6 +20,8 @@ A fun and festive CSS animation of a Christmas tree with glowing lights and a pu
 You can view the live animation here:  
 [View on GitHub Pages](https://daria-ropelato.github.io/Christmas_Card_html_css/)
 
+https://github.com/user-attachments/assets/2073a45a-d67a-4262-9834-bc32743a9d1a
+
 ---
 
 ## ✨ Tools & Technologies
